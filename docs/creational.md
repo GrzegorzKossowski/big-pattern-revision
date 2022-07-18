@@ -5,6 +5,10 @@
 Udostępnia interfejs do tworzenia obiektów w klasie bazowej, ale pozwala podklasom zmieniać typ tworzonych obiektów.
 Obiekty nazywane są produktami metody wytwórczej. Metoda wytwórcza definiuje metodę która ma służyć tworzeniu obiektów bez bezpośredniego wywoływania konstruktora (poprzez operator new). 
 
+Metoda Wytwórcza oddziela kod konstruujący produkty od kodu który faktycznie z tych produktów korzysta. Dlatego też łatwiej jest rozszerzać kod konstruujący produkty bez konieczności ingerencji w resztę kodu.
+
+Przykładowo, aby dodać nowy typ produktu do aplikacji, będziesz musiał utworzyć jedynie podklasę kreacyjną i nadpisać jej metodę wytwórczą.
+
 Identyfikacja: Metody wytwórcze można poznać po metodach kreacyjnych tworzących obiekty na podstawie konkretnych klas, ale zwracających typ abstrakcyjny lub interfejs.
 
 W skrócie:
@@ -31,10 +35,8 @@ class ChickenCreator extends BirdCreator {
 }
 ```
 
-
 🔥 Stosuj Metodę Wytwórczą gdy nie wiesz z góry jakie typy obiektów pojawią się w twoim programie i jakie będą między nimi zależności.
 
-https://refactoring.guru/pl/design-patterns/factory-method/typescript/example
 
 # Fabryka abstrakcyjna
 

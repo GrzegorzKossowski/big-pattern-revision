@@ -1,4 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const factoryMethod_1 = require("./creational/factoryMethod");
+const adapter_1 = require("./structural/adapter");
+const strategy_1 = require("./behavioral/strategy");
+console.log(`**** factoryMethod(); ****`);
 (0, factoryMethod_1.factoryMethod)();
+console.log(`\n**** adapter(); ****`);
+(0, adapter_1.adapter)();
+console.log(`\n**** strategy(); ****`);
+(0, strategy_1.strategy)();
